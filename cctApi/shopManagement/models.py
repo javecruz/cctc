@@ -35,6 +35,7 @@ class Product(models.Model):
 class Order(models.Model):
     createdDate = models.DateTimeField(auto_now_add=True)
     customerId = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    isReady = models.BooleanField(default=False)
 
 class OrderLine(models.Model):
     quantity =  models.IntegerField()
