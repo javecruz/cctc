@@ -14,7 +14,8 @@ class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     country = models.CharField(
             max_length=10,
-            choices =[(key, key.value) for key in CountryEnum]
+            choices =[(key, key.value) for key in CountryEnum],
+            default=CountryEnum.SPAIN
     )
 
     @receiver(post_save, sender=User)
