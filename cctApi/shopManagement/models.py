@@ -20,7 +20,7 @@ class Customer(models.Model):
     @receiver(post_save, sender=User)
     def create_customer(sender, instance, created, **kwargs):
         if created:
-            Customer.objects.cretae(user=instance)
+            Customer.objects.create(user=instance)
 
     @receiver(post_save, sender=User)
     def save_customer(sender, instance, **kwargs):
@@ -32,10 +32,11 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
 
 class Order(models.Model):
-    quantity =  models.IntegerField()
+    createdDate = models.DateTimeField(auto_now_add=True)
     customerId = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    productId = models.ForeignKey(Product, on_delete=models.CASCADE)
 
 class OrderLine(models.Model):
-    createdDate = models.DateTimeField(auto_now_add=True)
-    orderId = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity =  models.IntegerField()
+    orderId = models.ForeignKey(Order, on_delete=models.CASCADE)
+    productId = models.ForeignKey(Product, on_delete=models.CASCADE)
+

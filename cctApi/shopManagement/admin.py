@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Customer, Order, OrderLine, Product
 
-# Register your models here.
+modelsPack = [Customer, Order, OrderLine, Product]
+
+admin.site.register(modelsPack)
