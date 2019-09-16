@@ -1,0 +1,52 @@
+[
+	{
+		"model": "ShopManagement.product",
+		"pk": 1,
+		"fields": {
+			"name": "Shoes1",
+			"price": 19.99
+		}
+	},
+	{
+		"model": "ShopManagement.product",
+		"pk": 2,
+		"fields": {
+			"name": "Shoes2",
+			"price": 29.99
+		}
+	},
+	{
+		"model": "ShopManagement.product",
+		"pk": 3,
+		"fields": {
+			"name": "Sole1",
+			"price": 9.99
+		}
+	},
+	{
+		"model": "ShopManagement.product",
+		"pk": 4,
+		"fields": {
+			"name": "Sole2",
+			"price": 2.50
+		}
+	},
+	{
+		"model": "ShopManagement.product",
+		"pk": 5,
+		"fields": {
+			"name": "Adidos Pro",
+			"price": 79.99
+		}
+	},
+	{
+		"model": "ShopManagement.product",
+		"pk": 6,
+		"fields": {
+			"name": "Neki Runners",
+			"price": 109.99
+		}
+	}
+]
+
+
